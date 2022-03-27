@@ -21,6 +21,6 @@ jobs:
         username: danielgran
         password: 153297c1-52b1-44a5-be45-22e991be05a7
     - name: Build the Docker image
-      run: docker build . --tag danielgran/arma3:$(date +%s)
+      run: docker build . --build-arg STEAM_CREDS_USERNAME=$STEAMUSER --build-arg STEAM_CREDS_PASSWORD=$STEAMPASS --tag danielgran/arma3:$(date +%s)
     - name: Push
       run: docker push danielgran/arma3:$(date +%s)
