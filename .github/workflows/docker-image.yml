@@ -27,6 +27,6 @@ jobs:
         STEAMUSER: ${{ secrets.STEAMUSER }}
         STEAMPASS: ${{ secrets.STEAMPASS }}
       run: |
-        docker build . --build-arg STEAM_CREDS_USERNAME=$STEAMUSER --build-arg STEAM_CREDS_PASSWORD=$STEAMPASS --tag danielgran/arma3:$(date +%s)
+        docker build . --build-arg STEAM_CREDS_USERNAME=$STEAMUSER --build-arg STEAM_CREDS_PASSWORD=$STEAMPASS --tag danielgran/arma3:latest
     - name: Push
-      run: docker push danielgran/arma3:$(date +%s)
+      run: docker push danielgran/arma3:latest
