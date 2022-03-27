@@ -7,4 +7,4 @@ read username
 echo "Password: "
 read password
 
-docker build --build-arg STEAM_CREDS_USERNAME=$username --build-arg STEAM_CREDS_PASSWORD=$password -t ruan:test . -t danielgran/arma3:latest
+docker build --build-arg STEAM_CREDS_USERNAME=$username --build-arg STEAM_CREDS_PASSWORD=$password . -t danielgran/arma3:latest
