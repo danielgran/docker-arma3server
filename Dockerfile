@@ -7,4 +7,6 @@ WORKDIR ${INSTALL_PATH}
 
 COPY install-server.sh .
 RUN chmod +x install-server.sh && \
-  ./install-server.sh
+    ./install-server.sh && \
+    apt update && \
+    apt install -y libtbb2
