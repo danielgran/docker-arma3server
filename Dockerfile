@@ -8,7 +8,7 @@ WORKDIR ${INSTALL_PATH}
 COPY install-server.sh .
 RUN chmod +x install-server.sh && \
     ./install-server.sh && \
-    wget https://repo.mysql.com/mysql-apt-config_0.8.22-1_all.deb $$ \
+    wget https://repo.mysql.com/mysql-apt-config_0.8.22-1_all.deb && \
     dpkg -i mysql-apt-config_0.8.22-1_all.deb && \
     apt update && \
     apt upgrade -y && \
